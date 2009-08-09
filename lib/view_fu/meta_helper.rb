@@ -7,8 +7,8 @@ module ViewFu
       description = meta_description
       description = opts[:description] if description.blank?
       <<-META
-<meta name="keywords" content="#{meta_keywords}" />
-<meta name="description" content="#{meta_description}" />
+<meta name="keywords" content="#{keywords}" />
+<meta name="description" content="#{description}" />
       META
     end
 
