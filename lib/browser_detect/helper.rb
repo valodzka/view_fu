@@ -1,4 +1,5 @@
-module BrowserDetect::Helper
+module BrowserDetect
+  module Helper
   
   # check the current browser (via user agent) for the following:
   # :mozilla
@@ -41,5 +42,6 @@ module BrowserDetect::Helper
         ""
       end
     end
+  end
   end
 end
