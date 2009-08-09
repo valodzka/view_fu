@@ -58,8 +58,5 @@ module Headliner
       # If title is blank, return only website name
       content_tag :title, options[:site]
     end
-
-    # Mr. T says, "Use my method, fool!"
-    alias t title
   end
 end
