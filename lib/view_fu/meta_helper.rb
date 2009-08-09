@@ -1,11 +1,15 @@
 module ViewFu
   module MetaHelper
     # Output the current page's meta tags
-    def meta_tags
-      %(
-        <meta name="keywords" content="#{meta_keywords}" />
-        <meta name="description" content="#{meta_description}" />
-      )
+    def meta_tags(opts={ })
+      keywords = meta_keywords
+      keywords = opts[:keywords] if keywords.blank?
+      description = meta_description
+      description = opts[:description] if description.blank?
+      <<-META
+<meta name="keywords" content="#{meta_keywords}" />
+<meta name="description" content="#{meta_description}" />
+      META
     end
 
     # Get/Set Meta Keywords
