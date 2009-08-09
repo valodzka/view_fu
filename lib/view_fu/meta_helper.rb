@@ -7,7 +7,7 @@ module ViewFu
       description = meta_description
       description = opts[:description] if description.blank?
       language = opts[:language]
-      language = language ? %Q{<meta http-equiv="Content-Language" content="#{language}"/>} : ""
+      language = language ? %Q{<meta http-equiv="content-language" content="#{language}"/>} : ""
       <<-META
 #{language}
 <meta name="keywords" content="#{keywords}" />
